@@ -1,6 +1,7 @@
 import discord
 import responses
 import main
+import config
 
 async def send_message(message, user_message):
 
@@ -37,7 +38,6 @@ async def send_private_message(message):
 
 
 def run_discord_bot():
-    BOT_TOKEN = 'MTEyNDM3MTgzMjEwODIyMDU3Ng.G5VL5W.SxPAHFat2m12l8hTlIpqkWc5fkvbcp6ulCGOnY'
     client = discord.Client(intents=discord.Intents.all())
 
     @client.event
@@ -68,4 +68,4 @@ def run_discord_bot():
     
 
 
-    client.run(BOT_TOKEN)
+    client.run(config.BOT_TOKEN)
